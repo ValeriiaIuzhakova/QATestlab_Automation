@@ -21,7 +21,6 @@ public class CheckMainMenuTest extends BaseScript{
 
         WebElement searchButton = driver.findElement(By.name("submitLogin"));
         searchButton.click();
-
         Thread.sleep(5000);
 
         WebElement searchDashboard = driver.findElement(By.cssSelector("#tab-AdminDashboard"));
@@ -48,12 +47,10 @@ public class CheckMainMenuTest extends BaseScript{
         searchStats.click();
         System.out.println("Page title is "+ driver.getTitle());
 
-        //WebElement searchModules = driver.findElement(By.cssSelector("#subtab-AdminParentModulesSf"));
         WebElement searchModules = driver.findElement(By.linkText("Modules"));
         searchModules.click();
         System.out.println("Page title is "+ driver.getTitle());
 
-        //WebElement searchDesign = driver.findElement(By.cssSelector("#subtab-AdminParentThemes"));
         WebElement searchDesign = driver.findElement(By.linkText("Design"));
         searchDesign.click();
         System.out.println("Page title is "+ driver.getTitle());
@@ -77,7 +74,6 @@ public class CheckMainMenuTest extends BaseScript{
         WebElement searchConfiguration = driver.findElement(By.cssSelector("#subtab-AdminAdvancedParameters"));
         searchConfiguration.click();
         System.out.println("Page title is "+ driver.getTitle());
-
 
         String expectedTitle = driver.getTitle();
         driver.navigate().refresh();
